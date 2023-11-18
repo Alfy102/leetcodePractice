@@ -5,9 +5,7 @@ def twoSum(nums, target):
         remain = target - nums[i]
         if remain in numberMap.values():
             for index, value in numberMap.items():
-                if index == i:
-                    continue
-                if value == remain:
+                if value == remain and index != i:
                     possibleIndex.append(i)
     return possibleIndex
 
